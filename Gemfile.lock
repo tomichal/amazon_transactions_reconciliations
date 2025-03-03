@@ -1,0 +1,33 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    Ascii85 (2.0.1)
+    afm (0.2.2)
+    bigdecimal (3.1.9)
+    csv (3.3.2)
+    hashery (2.1.2)
+    pdf-reader (2.14.1)
+      Ascii85 (>= 1.0, < 3.0, != 2.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
+    rtesseract (3.1.3)
+    ruby-rc4 (0.1.5)
+    ttfunk (1.8.0)
+      bigdecimal (~> 3.1)
+
+PLATFORMS
+  ruby
+  x86_64-darwin-23
+
+DEPENDENCIES
+  csv
+  pdf-reader
+  rtesseract
+
+RUBY VERSION
+   ruby 3.4.2p28
+
+BUNDLED WITH
+   2.6.5
