@@ -5,7 +5,7 @@ require 'rtesseract'
 require 'pdf-reader'
 require 'csv'
 
-class Importer
+class Reconciliator
   @card_charges = []
   @amazon_orders = []
 
@@ -19,6 +19,8 @@ class Importer
   private
 
   def write_csv
+
+    Dir.mkdir('./output') unless Dir.exist?('./output') # Ensure 'output' directory exists
     
     CSV.open('./output/reconcile.csv', 'w') do |csv|
       csv << ['Card Charge Order Number', 'Order Number', 'Order Date', 'Order Details', 'Who', 'Order Price', 'Card Charge Amount'] # Headers for the CSV
@@ -104,4 +106,4 @@ class Importer
   end
 end
 
-Importer.new.run
+Reconciliator.new.run
