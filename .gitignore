@@ -1,3 +1,5 @@
+.DS_Store
 .idea/*
 input/*
 output/*
+amazon_transactions_reconciliations.iml
